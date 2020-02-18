@@ -1,0 +1,28 @@
+#error_explanation {
+  border-width: 1px;
+  border-color: #c00;
+}
+
+#error_explanation h2 {
+  background-color: #b44;
+}
+
+.field_with_errors {
+  background-color: transparent;
+  display: block;
+}
+
+.field_with_errors input,
+.field_with_errors textarea {
+  border-color: #ff0000;
+}
+
+.field_with_errors input[type=file] {
+  border-style: solid;
+  border-width: 1px;
+  padding: 8px;
+}
+
+.menu-list .image img {
+  width: 100px;
+}

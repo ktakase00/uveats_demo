@@ -1,0 +1,37 @@
+ja:
+  activerecord:
+    models:
+      user: 'ユーザ'
+      menu: 'メニュー'
+      order: '注文'
+    attributes:
+      user:
+        mail: 'メールアドレス'
+        user_name: 'ユーザ名'
+        password: 'パスワード'
+      menu:
+        menu_name: 'メニュー名'
+        price: '価格'
+        description: '説明'
+      order:
+        user_id: 'ユーザ'
+        menu_id: 'メニュー'
+        delivery_address: '配達先住所'
+        payment_method: '支払方法'
+        card_number: 'カード番号'
+  errors:
+    messages:
+      login_fauire: 'ログインに失敗しました。'
+  views:
+    sessions:
+      form:
+        submit: 'ログイン'
+    users:
+      form:
+        submit: '登録'
+    orders:
+      payment_method:
+        '01': '現金'
+        '02': 'クレジットカード'
+    app:
+      price_yen: "￥%{price}"

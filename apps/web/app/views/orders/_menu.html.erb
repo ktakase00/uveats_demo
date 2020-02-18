@@ -1,0 +1,16 @@
+<div class="grid-x">
+  <div class="cell medium-auto"></div>
+  <div class="cell medium-6">
+    <div class="card">
+      <div class="card-divider">
+        <%= menu.menu_name %>
+      </div>
+      <%= image_tag menu.image %>
+      <div class="card-section">
+        <div><%= t('views.app.price_yen', { price: menu.price }) %></div>
+        <div><%= menu.description %></div>
+      </div>
+    </div>
+  </div>
+  <div class="cell medium-auto"></div>
+</div>

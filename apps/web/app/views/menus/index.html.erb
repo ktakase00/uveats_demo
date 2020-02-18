@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Menus</h1>
+
+<div class="grid-x grid-margin-x">
+  <% @menus.each_slice(4) do |line| %>
+    <%= render partial: 'card', collection: line, as: :menu %>
+  <% end %>
+</div>
