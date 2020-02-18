@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<%= render partial: 'menu', locals: { menu: @menu } %>
+
+<p>
+  <strong><%= t('activerecord.attributes.order.user_id') %>:</strong>
+  <%= @me.user_name %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.order.delivery_address') %>:</strong>
+  <%= @order.delivery_address %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.order.payment_method') %>:</strong>
+  <%= t("views.orders.payment_method.#{@order.payment_method}") %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.order.card_number') %>:</strong>
+  <%= @order.card_number %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

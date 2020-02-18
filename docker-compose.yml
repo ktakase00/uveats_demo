@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  web:
+    build: .
+    image: ktakase00/rubypg-learn-uveats:uv-202002
+    volumes:
+      - ".:/home/ubuntu/repo"
+  db:
+    image: postgres:11
+    environment:
+      POSTGRES_USER: uveats
+      POSTGRES_PASSWORD: uveats
+      POSTGRES_DB: web_development
+      TZ: "Asia/Tokyo"
+    ports:
+      - 6432:5432

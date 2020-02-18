@@ -1,0 +1,14 @@
+<div class="cell medium-3">
+  <div class="card">
+    <div class="card-divider">
+      <%= menu.menu_name %>
+    </div>
+    <%= link_to new_order_path({ menu_id: menu.id }) do %>
+      <%= image_tag menu.image %>
+    <% end %>
+    <div class="card-section">
+      <div><%= t('views.app.price_yen', { price: menu.price }) %></div>
+      <div><%= menu.description %></div>
+    </div>
+  </div>
+</div>

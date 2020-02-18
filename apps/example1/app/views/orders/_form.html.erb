@@ -1,0 +1,41 @@
+<%= form_with(model: order, url: orders_path({ menu_id: menu.id }), local: true) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% order.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= render partial: 'menu', locals: { menu: menu } %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <div class="order-user-name"><%= me.user_name %></div>
+  </div>
+
+  <!-- ↓↓↓ここにコードを追加する↓↓↓ -->
+  <div class="field">
+    <%= form.label :delivery_address %>
+    <%= form.text_field :delivery_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :payment_method %>
+    <%= form.select :payment_method, options_for_select(payment_method_options) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :card_number %>
+    <%= form.text_field :card_number %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit nil, { class: 'button' } %>
+  </div>
+  <!-- ↑↑↑↑↑↑ -->
+<% end %>
